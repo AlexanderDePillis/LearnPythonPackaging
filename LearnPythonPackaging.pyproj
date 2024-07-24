@@ -11,6 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>LearnPythonPackaging</Name>
     <RootNamespace>LearnPythonPackaging</RootNamespace>
+    <InterpreterId>MSBuild|env_test|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +23,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="LearnPythonPackaging.py" />
-    <Compile Include="packaging_tutorial\src\example_package_depila\example.py">
+    <Compile Include="packaging_tutorial\src\example_package_depila\example_test.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="packaging_tutorial\src\example_package_depila\__init__.py">
@@ -39,6 +40,17 @@
     <Content Include="packaging_tutorial\LICENSE.txt" />
     <Content Include="packaging_tutorial\pyproject.toml" />
     <Content Include="packaging_tutorial\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env_test\">
+      <Id>env_test</Id>
+      <Version>0.0</Version>
+      <Description>env_test (Python 3.12 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
