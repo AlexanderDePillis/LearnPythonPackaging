@@ -31,8 +31,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="packaging_tutorial\" />
+    <Folder Include="packaging_tutorial\tests\" />
     <Folder Include="packaging_tutorial\src\" />
     <Folder Include="packaging_tutorial\src\example_package_depila\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packaging_tutorial\LICENSE.txt" />
+    <Content Include="packaging_tutorial\pyproject.toml" />
+    <Content Include="packaging_tutorial\README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
