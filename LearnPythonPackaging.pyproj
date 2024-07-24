@@ -32,11 +32,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="packaging_tutorial\" />
+    <Folder Include="packaging_tutorial\dist\" />
     <Folder Include="packaging_tutorial\tests\" />
     <Folder Include="packaging_tutorial\src\" />
     <Folder Include="packaging_tutorial\src\example_package_depila\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packaging_tutorial\dist\example_package_depila-0.0.1-py3-none-any.whl" />
+    <Content Include="packaging_tutorial\dist\example_package_depila-0.0.1.tar.gz" />
     <Content Include="packaging_tutorial\LICENSE.txt" />
     <Content Include="packaging_tutorial\pyproject.toml" />
     <Content Include="packaging_tutorial\README.md" />
